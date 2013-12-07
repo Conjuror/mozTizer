@@ -1,10 +1,9 @@
 <html>
 <head>
-</head>
-<body>
 	<link rel="stylesheet" href="jquery-ui-1.10.3/themes/base/jquery-ui.css" />
 	<script src="jquery-ui-1.10.3/jquery-1.9.1.js"></script>
 	<script src="jquery-ui-1.10.3/ui/jquery-ui.js"></script>
+	<!-- <script src="moztizer.js"></script> -->
 	<script>
 		$(function() {
 			$("#dialog").dialog({
@@ -12,7 +11,13 @@
 				height: 140
 			});
 		});
+
+		window.onMessage = function(msg) {
+			$("p").text = msg;
+		};
 	</script>
+</head>
+<body>
 	<div id="dialog" title="HAHAHAHA">
 		<p>Welcome To First Pages</p>
 	</div>
